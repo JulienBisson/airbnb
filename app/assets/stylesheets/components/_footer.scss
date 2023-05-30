@@ -39,7 +39,7 @@
 
 .wrapper .icon {
   position: relative;
-  background: #ffffff;
+  background: lightgoldenrodyellow;
   border-radius: 50%;
   padding: 15px;
   margin: 10px;
@@ -53,6 +53,9 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  // &:hover {
+  //   transform: scale(1.2);
+  // }
 }
 
 .wrapper .tooltip {

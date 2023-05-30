@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
