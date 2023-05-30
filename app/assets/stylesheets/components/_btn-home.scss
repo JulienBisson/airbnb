@@ -1,0 +1,285 @@
+// .btn-home {
+//   text-decoration: none;
+//   background-color: white;
+//   color : black;
+//   border: 1px solid black;
+//   border-radius: 50px;
+//   padding: 10px 25px;
+//   &:hover {
+//   color: white;
+//   border: 1px solid white;
+//   background-color: black;
+//   transition-duration: 0.3s;
+// }}
+////////////////////////////////////////////////////////////////
+/* CSS */
+// .btn-home {
+//   padding: 0.6em 2em;
+//   border: none;
+//   outline: none;
+//   color: rgb(255, 255, 255);
+//   background: #111;
+//   cursor: pointer;
+//   position: relative;
+//   z-index: 0;
+//   border-radius: 10px;
+//   user-select: none;
+//   -webkit-user-select: none;
+//   touch-action: manipulation;
+// }
+
+// .btn-home:before {
+//   content: "";
+//   background: linear-gradient(
+//     45deg,
+//     #ff0000,
+//     #ff7300,
+//     #fffb00,
+//     #48ff00,
+//     #00ffd5,
+//     #002bff,
+//     #7a00ff,
+//     #ff00c8,
+//     #ff0000
+//   );
+//   position: absolute;
+//   top: -2px;
+//   left: -2px;
+//   background-size: 400%;
+//   z-index: -1;
+//   filter: blur(5px);
+//   -webkit-filter: blur(5px);
+//   width: calc(100% + 4px);
+//   height: calc(100% + 4px);
+//   animation: glowing-btn-home 20s linear infinite;
+//   transition: opacity 0.3s ease-in-out;
+//   border-radius: 10px;
+// }
+
+// @keyframes glowing-btn-home {
+//   0% {
+//     background-position: 0 0;
+//   }
+//   50% {
+//     background-position: 400% 0;
+//   }
+//   100% {
+//     background-position: 0 0;
+//   }
+// }
+
+// .btn-home:after {
+//   z-index: -1;
+//   content: "";
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   background: #222;
+//   left: 0;
+//   top: 0;
+//   border-radius: 10px;
+// }
+//////////////////////////////////////////////////////////
+// .btn-home {
+// 	--border-radius: 24px;
+// 	--border-width: 8px;
+
+// 	appearance: none;
+// 	position: relative;
+// 	padding: 1em 2em;
+// 	border: 0;
+// 	background-color: transparent;
+// 	font-family: "Montserrat", sans-serif;
+// 	font-size: 2em;
+// 	font-weight: 600;
+// 	color: #fff;
+// }
+
+// .btn-home::after {
+// 	--m-i: linear-gradient(#000, #000);
+// 	--m-o: content-box, padding-box;
+
+// 	content: "";
+// 	position: absolute;
+// 	left: 0;
+// 	top: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	padding: var(--border-width);
+// 	border-radius: var(--border-radius);
+// 	background-image: conic-gradient(
+// 		#488cfb,
+// 		#29dbbc,
+// 		#ddf505,
+// 		#ff9f0e,
+// 		#e440bb,
+// 		#655adc,
+// 		#488cfb
+// 	);
+
+// 	mask-image: var(--m-i), var(--m-i);
+// 	mask-origin: var(--m-o);
+// 	mask-clip: var(--m-o);
+// 	mask-composite: exclude;
+// 	-webkit-mask-composite: destination-out;
+
+// 	filter: hue-rotate(0);
+// 	animation: hue linear 500ms infinite;
+// 	animation-play-state: paused;
+// }
+
+// .btn-home:hover::after {
+// 	animation-play-state: running;
+// }
+
+// @keyframes hue {
+// 	to {
+// 		filter: hue-rotate(1turn);
+// 	}
+// }
+
+// /* to have things in good shape */
+// *,
+// *::before,
+// *::after {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// }
+
+// html,
+// body {
+// 	height: 100%;
+// }
+
+// body {
+// 	background-color: #161724;
+// 	display: grid;
+// 	place-items: center;
+// }
+/////////////////////////////////////////////////////////////
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
+
+$btn-color: #FFB902;
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+.btn-home {
+	position: relative;
+	font-family: 'Electrolize', sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+	line-height: 1;
+	color: $btn-color;
+	margin: 0;
+	padding: 1em;
+	background: none;
+	border: none;
+	cursor: pointer;
+  text-decoration: none;
+
+	&:hover {
+		color: lighten($btn-color, 20%);
+	}
+	&:focus {
+		color: lighten($btn-color, 10%);
+		outline: none;
+	}
+	&:active {
+		color: $btn-color;
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 1px;
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+		box-shadow: inset 1px 1px 0 0 $btn-color;
+	}
+	&:after {
+		right: 0;
+		bottom: 0;
+		box-shadow: inset -1px -1px 0 0 $btn-color;
+	}
+
+}
+
+.btn-home:hover {
+	&:before {
+		animation: hoverShadowBefore 1s forwards;
+	}
+	&:after {
+		animation: hoverShadowAfter 1s forwards;
+	}
+}
+
+@keyframes hoverShadowBefore {
+  	0% {
+    	width: 100%;
+		height: 1px;
+
+		top: 0;
+		left: 0;
+  	}
+  	33% {
+   	width: 1px;
+		height: 100%;
+
+		top: 0;
+		left: 0;
+  	}
+	66% {
+		width: 1px;
+		height: 1px;
+
+		top: calc(100% - 1px);
+		left: 0;
+	}
+	100% {
+   	width: 100%;
+		height: 1px;
+
+		top: calc(100% - 1px);
+		left: 0;
+  	}
+}
+
+@keyframes hoverShadowAfter {
+  	0% {
+    	width: 100%;
+		height: 1px;
+  	}
+  	33% {
+   	width: 1px;
+		height: 100%;
+
+		bottom: 0;
+		right: 0;
+  	}
+	66% {
+		width: 1px;
+		height: 1px;
+
+		bottom: calc(100% - 1px);
+		right: 0;
+	}
+	100% {
+   	width: 100%;
+		height: 1px;
+
+		bottom: calc(100% - 1px);
+		right: 0;
+  	}
+}
