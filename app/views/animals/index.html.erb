@@ -17,14 +17,30 @@
 <div class="animals-container">
   <% @animals.each do |animal| %>
     <div class="card-product">
+    <%= link_to animal_path(animal) do %>
       <%= cl_image_tag animal.photo.key, width:300 %>
       <div class="card-product-infos">
-      <%= link_to animal.name, animal_path(animal), class: "no-style" %>
-
-        <p><%= animal.summary %></p>
-        <p class="price"><%= animal.price_per_day %>€</p>
+        <div class='product-name-localisation'>
+          <%= animal.name %>
+          <p>📍<%= animal.localisation %></p>
+        </div>
+        <div class='card-price-capacity'>
+          <h6 class="price">💰<%= animal.price_per_day.to_i %>$/day</h6>
+          <div class='beast-capacity'>
+            <% if animal.can_fly %>
+            <span class='beast-capacity-icon'>🪽</span>
+            <% end %>
+            <% if animal.can_walk %>
+            <span class='beast-capacity-icon'>🐾</span>
+            <% end %>
+            <% if animal.can_swim %>
+            <span class='beast-capacity-icon'>🌊</span>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
   <% end %>
 </div>
-
+</a>
