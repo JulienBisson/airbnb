@@ -1,0 +1,27 @@
+<div class="container_image_show">
+
+  <div class="animal_info mb-3">
+    <%=cl_image_tag @animal.photo.key, class:"image_show"%>
+    <div class="card-body">
+      <h5 class="card-title"><%= @animal.name %></h5>
+      <p class="card-text"><%= @animal.summary %></p>
+      <p class="card-text"><small class="text-muted"><%= @animal.localisation %></small></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h5 class="card-title"><%= @animal.price_per_day.to_i %> € </h5>
+    <div class='checkin'>
+      <label for="start">Start date:</label><br>
+      <input type="date" id="start" name="trip-start"
+          value= '<%= Date.new %>'
+          min="2019-01-01" max="2026-12-31"><br>
+      <label for="end">End date:</label><br>
+      <input type="date" id="end" name="trip-end"
+          value= '<%= Date.new %>'
+          min="2019-01-01" max="2026-12-31"><br>
+    </div>
+    <a href="#" class="btn btn-success">Reserved</a>
+    <p>Total</p>
+  </div>
+</div>
