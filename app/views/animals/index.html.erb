@@ -1,13 +1,30 @@
-<h1>Here: Animals</h1>
+<div class="form-animals-index">
+  <form>
+    <label for="animal">Select your animal:</label>
+    <select id="animal" name="animal">
+      <% @animals.each do |animal| %>
+        <option value="<%= animal.id %>"><%= animal.name %></option>
+      <% end %>
+    </select>
+    <label for="start-date">Start Date</label>
+    <input type="date" id="start-date" name="start-date">
+    <label for="end-date">End Date</label>
+    <input type="date" id="end-date" name="end-date">
+    <input type="submit" value="Search">
+  </form>
+</div>
 
-<%# <label for="start">Start date:</label>
+<div class="animals-container">
+  <% @animals.each do |animal| %>
+    <div class="card-product">
+      <%= cl_image_tag animal.photo.key, width:300 %>
+      <div class="card-product-infos">
+      <%= link_to animal.name, animal_path(animal), class: "no-style" %>
 
-<input type="date" id="start" name="trip-start"
-       value="<%= Date.now>"
-       min="2019-01-01" max="2026-12-31">
+        <p><%= animal.summary %></p>
+        <p class="price"><%= animal.price_per_day %>€</p>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<label for="end">End date:</label>
-
-<input type="date" id="end" name="trip-end"
-       value="<%= Date.now + 2>"
-       min="2019-01-01" max="2026-12-31"> %>

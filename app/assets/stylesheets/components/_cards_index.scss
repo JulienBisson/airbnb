@@ -1,0 +1,121 @@
+body {
+  background-image: linear-gradient(76.3deg, rgba(44,62,78,0.5) 12.6%, rgba(69,103,131,0.5) 82.8%);
+}
+
+.no-style {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.no-style:hover {
+    color: rgba(69,103,131,0.5);
+}
+
+.animals-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 220px; /* Add margin to the sides */
+}
+
+.card-product {
+  overflow: hidden;
+  height: 100%;
+  flex-grow: 1; /* Allow the element to grow */
+  max-width: calc(33.33% - 39px); /* Set a maximum width */
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 18px;
+  border-radius: 10px;
+
+ img {
+ height: 200px;
+ width: 100%;
+ }
+
+ h2 {
+ font-size: 16px;
+ font-weight: bold;
+ margin: 0;
+ }
+
+ p {
+ font-size: 12px;
+ line-height: 1.4;
+ opacity: .7;
+ margin-bottom: 0;
+ margin-top: 8px;
+ display: -webkit-box; /* Required for line-clamp to work */
+ -webkit-line-clamp: 2; /* Limit the number of lines */
+ -webkit-box-orient: vertical; /* Required for line-clamp to work */
+ overflow: hidden; /* Hide the overflow */
+ }
+
+ &:hover {
+ transform: scale(1.05);
+ }
+
+ .price {
+ font-weight: bold;
+ font-size: 16px; }
+
+
+ .card-product-infos {
+  padding: 16px;
+  height: 150px;
+  background-image: linear-gradient( 76.3deg, rgba(249, 249, 249, 0.993) 12.6%, rgba(69,103,131,0.5) 82.8% );
+}
+}
+
+.form-animals-index {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  justify-content: center;
+  label {
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    padding: 5px 10px;
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  input[type="submit"]:hover {
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+  }
+}
+
+
+
+
+@media (max-width:1024px) {
+ .card-product {
+ width: calc(100% /2 -10px);
+}
+}
+
+@media (max-width:768px) {
+ .card-product {
+ width: calc(100% -10px);
+}
+}
