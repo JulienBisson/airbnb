@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/animals/">Animals</a>
@@ -19,11 +19,15 @@
             <a class="nav-link" href="/users/sign_in">Log in</a>
           </li>
           <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://www.sicaudieres.org/wp-content/uploads/2021/02/avatar_neutre-5.png" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="/users/sign_out">Log out</a>
+            <% if user_signed_in? %>
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://www.sicaudieres.org/wp-content/uploads/2021/02/avatar_neutre-5.png" />
+            <% end %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <% if user_signed_in? %>
+                  <a class="dropdown-item" data-turbo-method="delete" href="/users/sign_out">Log out</a>
+                <% else %>
+                  <a class="dropdown-item" href="/users/sign_in">Login</a>
+                <% end %>
             </div>
           </li>
           <!--li class="nav-item"-->
