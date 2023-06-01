@@ -34,6 +34,12 @@
         <!-- fin card row-->
       </div>
       <!-- fin 1ère CARD -->
+      <div> card à automatiser</div>
+        <% @owner_bookings.each do |booking| %>
+        <div class="booking-received-card"> CARD :
+        <%= "#{User.find(booking.animal.owner_id).email} has a demand of booking by #{booking.user.email} for #{booking.animal.name}"%>
+        </div>
+        <% end %>
     </div>
     <!-- fin div col md 6 -->
 
