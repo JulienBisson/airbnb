@@ -8,4 +8,34 @@ class BookingsController < ApplicationController
     @user_bookings = Booking.where(user_id: current_user.id)
     @owner_bookings = Booking.includes(:animal).where(animal: { owner_id: current_user.id })
   end
+
+  def create
+    @animal = Animal.find(params[:animal_id])
+    @booking = Booking.new(booking_params)
+    @booking.animal = @animal
+    @booking.user = current_user
+    if @booking.save
+      redirect_to bookings_path
+    else
+      render 'animals/show', status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @booking = booking.find(params[:id])
+  end
+
+  def update
+    if @booking.update(booking_params)
+      redirect_to accept_owner_booking_path(@booking)
+    else
+      redirect_to decline_owner_booking(@booking)
+    end
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :total_price, :status, :create_at, :updated_at, :user_id, :animal_id)
+  end
 end
