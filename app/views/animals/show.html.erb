@@ -9,22 +9,19 @@
     </div>
   </div>
 
-  <div class="card">
-    <h5 class="card-title"><%= @animal.price_per_day.to_i %> € </h5>
+  <div class="card-show">
+    <h5 class="card-show-title"><%= @animal.price_per_day.to_i %> € </h5>
     <div class='checkin'>
-      <label for="start">Start date:</label><br>
-      <input type="date" id="start" name="trip-start"
-          value= '<%= Date.new %>'
-          min="2019-01-01" max="2026-12-31"><br>
-      <label for="end">End date:</label><br>
-      <input type="date" id="end" name="trip-end"
-          value= '<%= Date.new %>'
-          min="2019-01-01" max="2026-12-31"><br>
+      <%= simple_form_for(@animal @booking) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :rating %>
+        <%= f.submit %>
+      <% end %>
     </div>
       <div class= "button-show">
         <a href="#" class="button-animal-show">Reserve</a>
       </div>
-    <p>Total</p>
   </div>
 
 </div>
