@@ -5,4 +5,10 @@ class Animal < ApplicationRecord
   validates :localisation, presence: true
   validates :summary, length: { maximum: 200 }
   has_one_attached :photo
+  include PgSearch::Model
+  pg_search_scope :search_by_name_and_summary,
+                  against: %i[name summary],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 end
