@@ -1,8 +1,11 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-      <%= image_tag('logo-app.jpg', class:'rounded-circle') %>
-</a>
+    <div class='beats-logo-title'>
+      <a class="navbar-brand" href="/">
+        <img src="https://cdn.pixabay.com/photo/2016/04/01/11/29/avatar-1300370_1280.png" alt="logo" class='rounded-circle'>
+      </a>
+      <h5>Discovery Fantastics Beats</h5>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,11 +16,14 @@
             <a class="nav-link" href="/animals/">Animals</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/animals/">Rent your beast</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/users/sign_in">Log in</a>
           </li>
           <li class="nav-item dropdown">
             <% if user_signed_in? %>
-              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://cdn.pixabay.com/photo/2016/04/01/11/29/avatar-1300370_1280.png" />
+              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="/app/assets/images/avatar1.webp" />
             <% end %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <% if user_signed_in? %>

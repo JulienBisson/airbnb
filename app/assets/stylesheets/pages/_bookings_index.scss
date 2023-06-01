@@ -1,9 +1,17 @@
 // ----------TITRE : RENTAL REQUESTS----------
-
-.bookings-index-h1 {
-  text-align: center;
+.container {
+  height: 50vh;
+  width: 100%;
 }
 
+body {
+  height: 200px;
+  width: 100%;
+}
+
+.resquest {
+  margin-top: 5px;
+}
 // ----------COLONNE RECEIVED----------
 
 .booking-received-card {

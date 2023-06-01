@@ -1,0 +1,30 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-rent {
+  margin: 50px 25px;
+  background-color: red;
+  height: 100vh;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-rent-list {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 350px;
+  margin: 15px 15px;
+}
