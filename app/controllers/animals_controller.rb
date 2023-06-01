@@ -3,6 +3,9 @@ class AnimalsController < ApplicationController
 
   def index
     @animals = Animal.all
+    if params[:query].present?
+      @animals = @animals.where("name ILIKE ? OR summary ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+    end
   end
 
   def show

@@ -23,7 +23,6 @@ body {
 
 .card-product {
   overflow: hidden;
-  height: 100%;
   flex-grow: 1; /* Allow the element to grow */
   max-width: calc(33.33% - 39px); /* Set a maximum width */
   background: white;
@@ -40,51 +39,51 @@ body {
     box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
   }
 
- img {
- height: 200px;
- width: 100%;
- background-size: cover ;
- }
-
- h2 {
- font-size: 16px;
- font-weight: bold;
- margin: 0;
- }
-
- p {
- font-size: 12px;
- line-height: 1.4;
- opacity: .7;
- margin-bottom: 0;
- margin-top: 2px;
- display: -webkit-box; /* Required for line-clamp to work */
- -webkit-line-clamp: 2; /* Limit the number of lines */
- -webkit-box-orient: vertical; /* Required for line-clamp to work */
- overflow: hidden; /* Hide the overflow */
- }
-
- .price {
- font-weight: bold;
- font-size: 16px; }
-
-
- .card-product-infos {
-  padding: 16px;
-  height: 150px;
+  img {
+  height: 200px;
   width: 100%;
-  background-image: linear-gradient( 76.3deg, rgba(249, 249, 249, 0.993) 12.6%, rgba(69,103,131,0.5) 82.8% );
-  h6 {
-    margin-top: 70px;
-    margin-bottom: 5px;
-  }
-  a {
-  text-decoration: none;
-  color: black;
-
+  background-size: cover ;
   }
 
-}
+  h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  }
+
+  p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 2px;
+  display: -webkit-box; /* Required for line-clamp to work */
+  -webkit-line-clamp: 2; /* Limit the number of lines */
+  -webkit-box-orient: vertical; /* Required for line-clamp to work */
+  overflow: hidden; /* Hide the overflow */
+  }
+
+  .price {
+  font-weight: bold;
+  font-size: 16px; }
+
+
+  .card-product-infos {
+    padding: 16px;
+    height: 150px;
+    width: 100%;
+    background-image: linear-gradient( 76.3deg, rgba(249, 249, 249, 0.993) 12.6%, rgba(69,103,131,0.5) 82.8% );
+    h6 {
+      margin-top: 70px;
+      margin-bottom: 5px;
+    }
+    a {
+    text-decoration: none;
+    color: black;
+
+    }
+
+  }
 }
 
 .card-price-capacity {
@@ -146,6 +145,19 @@ body {
 }
 
 
+.main-animals-container{
+margin-top: 80px !important;
+min-height: 100vh;
+}
+
+// .index-animals-container {
+//   height: 68vh !important;
+//   width: 100% !important;
+//   margin: auto !important;
+//   display: flex !important;
+//   justify-content: center !important;
+//   align-items: center !important;
+// }
 
 
 @media (max-width:1024px) {
