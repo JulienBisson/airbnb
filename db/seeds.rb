@@ -8,12 +8,12 @@ User.destroy_all
 
 puts 'Creating user...'
 
-tom = User.create!(email: "tom@mail.com", password: "azerty")
-flora = User.create!(email: "flora@mail.com", password: "azerty")
-ben = User.create!(email: "ben@mail.com", password: "azerty")
-peggy = User.create!(email: "peggy@mail.com", password: "azerty")
-harry = User.create!(email: "harry@mail.com", password: "azerty")
-sasha = User.create!(email: "sasha@mail.com", password: "azerty")
+tom = User.create!(username: "Tom", age: 28, job: "architect", email: "tom@mail.com", password: "secret")
+flora = User.create!(username: "Flora", age: 25, job: "beekeeper", email: "flora@mail.com", password: "secret")
+ben = User.create!(username: "Ben", age: 32, job: "mason", email: "ben@mail.com", password: "secret")
+peggy = User.create!(username: "Peggy", age: 35, job: "florist", email: "peggy@mail.com", password: "secret")
+harry = User.create!(username: "Harry", age: 26, job: "developer", email: "harry@mail.com", password: "secret")
+sasha = User.create!(username: "Sasha", age: 30, job: "data-analyst", email: "sasha@mail.com", password: "secret")
 
 puts "Creating animals..."
 
@@ -65,9 +65,9 @@ lokhlass = Animal.create!(
   name: 'Lokhlass',
   price_per_day: 850,
   localisation: 'Aqualand',
-  can_fly: true,
-  can_swim: false,
-  can_walk: true,
+  can_fly: false,
+  can_swim: true,
+  can_walk: false,
   summary: "Lokhlass is the ideal ocean companion for your family outings. He lives in the marvelous Aqualand water park but he can be privatized just for you.. Try the cruise on the back of Lokhlass",
   owner: sasha)
 
