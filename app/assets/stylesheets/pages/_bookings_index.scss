@@ -1,4 +1,10 @@
-// ----------TITRE : RENTAL REQUESTS----------
+.bookings-global-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  min-height: 100vh;
+  padding: 5%;
+}
+
 #bookings-main-title {
   background-color: lightsteelblue;
   border-radius: 15%;
@@ -10,21 +16,6 @@
   margin: 5px;
 }
 
-.bookings-global-container {
-  margin-top: 80px;
-  margin-bottom: 80px;
-  min-height: 100vh;
-  padding: 5%;
-}
-
-body {
-  height: 200px;
-  width: 100%;
-}
-
-.resquest {
-  margin-top: 5px;
-}
 // ----------COLONNE RECEIVED----------
 
 .booking-received-card {
@@ -45,7 +36,13 @@ body {
   object-fit: cover;
 }
 
-.booking-profile-name
+.booking-profile-name {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif, bold;
+  font-size: larger;
+  background-color: aqua;
+
+}
 .booking-profile-age
 .booking-profile-job
 
