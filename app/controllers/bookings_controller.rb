@@ -5,6 +5,6 @@ class BookingsController < ApplicationController
 
   def index
     @user_bookings = Booking.where(user: current_user)
-    @owner_bookings = Booking.includes(:animal).where(animal: {user: current_user})
+    @owner_bookings = Booking.includes(:animal).where(animal: { user: current_user })
   end
 end

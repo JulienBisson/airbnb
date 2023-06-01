@@ -1,18 +1,14 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 40vh;
-  height: 155vh;
+  height: 100vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  h1, h3, p {
-    text-align: start;
-  }
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .banner h1 {
