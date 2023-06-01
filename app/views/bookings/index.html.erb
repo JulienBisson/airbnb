@@ -1,38 +1,74 @@
 <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h2 class="request text-center">Reservation request
-        </h2>
-        <p class="text-center">These people wants to book one of your animal ! Answer them :</p>
-        <div class="booking-received-card"> <!-- 1ere CARD -->
-          <div class="row"> <!-- card row-->
-            <div class="renter-profile col-md-4">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Flora" class="booking-profile-photo">
-              <p class="booking-profile-name">Flora</p>
-              <p class="booking-profile-age">32 ans</p>
-              <p class="booking-profile-job">Assistante maternelle</p>
-            </div> <!-- fin renter profile -->
-            <div class="reservation-container col-md-8">
-              <div class="reservation-details">
-                <p>Elle a craquée pour Ikran <img src="https://images.unsplash.com/photo-1610926597998-fc7f2c1b89b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Ikran" class="booking-profile-photo"></p>
-                <p> <img src="https://cdn-icons-png.flaticon.com/512/123/123392.png?w=1380&t=st=1685540969~exp=1685541569~hmac=2941c188814385158d9c3ad1b8fd230d8e9ac38e604193cf245f9d4eb6bf669a" alt="icone calendar" class="booking-icon">17 et 18 juin 2023</p>
-                <p>Ikran n'a rien de prévu pour ces dates</p>
-              </div> <!-- fin réservation détails -->
-              <div class="reservation-acceptance">
-                <p>Accepter la réservation ?</p>
-                <p>
-                  <button>Oui</button>
-                  <button>Non</button>
-                </p>
-              </div>
-            </div> <!-- fin réservation container -->
-          </div> <!-- fin card row-->
-        </div> <!-- fin 1ere CARD -->
-      </div> <!-- fin div col md 6 -->
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="request text-center">Reservation request</h2>
+      <p class="text-center">These people want to book one of your animals! Answer them:</p>
+      <div class="booking-received-card">
+        <!-- 1ère CARD -->
+        <div class="row">
+          <!-- card row-->
+          <div class="renter-profile col-md-4">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Flora" class="booking-profile-photo">
+            <p class="booking-profile-name">Flora</p>
+            <p class="booking-profile-age">32 ans</p>
+            <p class="booking-profile-job">Assistante maternelle</p>
+          </div>
+          <!-- fin renter profile -->
+          <div class="reservation-container col-md-8">
+            <div class="reservation-details">
+              <p>Elle a craqué pour Ikran <img src="https://images.unsplash.com/photo-1610926597998-fc7f2c1b89b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" alt="Ikran" class="booking-profile-photo"></p>
+              <p> <img src="https://cdn-icons-png.flaticon.com/512/123/123392.png?w=1380&t=st=1685540969~exp=1685541569~hmac=2941c188814385158d9c3ad1b8fd230d8e9ac38e604193cf245f9d4eb6bf669a" alt="icone calendar" class="booking-icon">17 et 18 juin 2023</p>
+              <p>Ikran n'a rien de prévu pour ces dates</p>
+            </div>
+            <!-- fin réservation détails -->
+            <div class="reservation-acceptance">
+              <p>Accepter la réservation ?</p>
+              <p>
+                <button>Oui</button>
+                <button>Non</button>
+              </p>
+            </div>
+          </div>
+          <!-- fin réservation container -->
+        </div>
+        <!-- fin card row-->
+      </div>
+      <!-- fin 1ère CARD -->
+      <div> card à automatiser</div>
+        <% @owner_bookings.each do |booking| %>
+        <div class="booking-received-card"> CARD :
+        <%= "#{User.find(booking.animal.owner_id).email} has a demand of booking by #{booking.user.email} for #{booking.animal.name}"%>
+        </div>
+        <% end %>
+    </div>
+    <!-- fin div col md 6 -->
 
-    <div class="col-md-6 text-center"> <!-- REQUESTS : SENT -->
+    <div class="col-md-6 text-center">
+      <!-- REQUESTS : SENT -->
       <h2>Sent</h2>
       <!-- Contenu des demandes envoyées -->
+      <h2>All bookings :</h2>
+      <ul>
+        <% @all_bookings.each do |booking| %>
+        <li><%= "#{booking.user.email} wants to rent #{booking.animal.name}"%></li>
+        <% end %>
+      </ul>
+      <h2>Demands of bookings received:</h2>
+      <ul>
+        <% @owner_bookings.each do |booking| %>
+        <li><%= "#{User.find(booking.animal.owner_id).email} has a demand of booking by #{booking.user.email} for #{booking.animal.name}"%></li>
+        <% end %>
+      </ul>
+      <h2>Demands of bookings sent:</h2>
+      <ul>
+        <% @user_bookings.each do |booking| %>
+        <li><%= "#{booking.user.email} wants to rent #{booking.animal.name}."%></li>
+        <% end %>
+      </ul>
     </div>
-  </div> <!-- div class row -->
-</div> <!-- div class container fluid -->
+  </div>
+  <!-- div class row -->
+</div>
+<!-- div class container -->
+
+<!-- booking.animal.owner_id -->
