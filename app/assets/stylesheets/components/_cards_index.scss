@@ -144,30 +144,29 @@ body {
   }
 }
 
+.btn-pink {
+  background-color: #FFB6C1;
+  }
+.btn-pink:hover {
+  background-color: #FFB6C1;
+  }
 
 .main-animals-container{
 margin-top: 80px !important;
 min-height: 100vh;
 }
 
-// .index-animals-container {
-//   height: 68vh !important;
-//   width: 100% !important;
-//   margin: auto !important;
-//   display: flex !important;
-//   justify-content: center !important;
-//   align-items: center !important;
-// }
 
 
-@media (max-width:1024px) {
- .card-product {
- width: calc(100% /2 -10px);
+
+  @media (max-width:1024px) {
+  .card-product {
+  width: calc(100% /2 -10px);
 }
 }
 
-@media (max-width:768px) {
- .card-product {
- width: calc(100% -10px);
-}
+  @media (max-width:768px) {
+  .card-product {
+  width: calc(100% -10px);
+  }
 }
