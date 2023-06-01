@@ -1,47 +1,106 @@
+.container-animals {
+  margin-top: 70px;
+  background-color: #f4f4f4;
+  height: 100vh;
+}
 
+.animal-name {
+  margin-left: 5%;
+  padding-top: 2%;
+}
 .container_image_show {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+  align-items: flex-start;
 
   .animal_info {
+    margin: 2% 5%;
     flex: 2;
-    margin: 5%;
   }
   .image_show{
+    height: 350px;
     width: 100%;
     border-radius: 10px;
+    background-size: cover;
+  }
+
+  .card-show-title {
+    margin-top: 20px;
+    margin-left: 15px;
   }
 
   .card-show {
     flex: 1;
-    margin: 5%;
+    height: 350px;
+    margin: 2% 5%;
+    margin-bottom: 7%;
     border-radius: 10px;
-    background-image: linear-gradient( 76.3deg, rgba(249, 249, 249, 0.993) 12.6%, rgba(69,103,131,0.5) 82.8% );
+    background-color: lightgrey;
 
     .checkin {
       padding-top: 15px;
       padding-bottom: 15px;
       padding-left: 5px;
-    }
-
-    .button-show {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
 
       .button-animal-show {
         border: 1px  solid black;
         border-radius: 5px;
-        text-align: center;
         text-decoration: none;
-        text-transform: none;
         padding: 10px 24px;
-        width: 150px;
         background-color: rgba(69,103,131,0.5);
         color: black;
         font-family: 'Roboto Flex', sans-serif;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 40px;
+
       }
+    }
+  }
+}
+
+#new_booking {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.button_start_date, .button_end_date {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin-top: 20px;
+}
+
+.card-title-localisation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .card-text {
+    color:  black;
+  }
+}
+
+.capacity {
+  display: inline-block;
+
+  img {
+    height: 100px;
+    width: 100schepx;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 15px;
+    &:hover {
+      box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.176);
+      border: 0px solid rgba(0,0,0,0.2);
+
     }
   }
 }

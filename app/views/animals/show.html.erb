@@ -1,27 +1,39 @@
-<div class="container_image_show">
-
-  <div class="animal_info mb-3">
-    <%=cl_image_tag @animal.photo.key, class:"image_show"%>
-    <div class="card-body">
-      <h5 class="card-title"><%= @animal.name %></h5>
-      <p class="card-text"><%= @animal.summary %></p>
-      <p class="card-text"><small class="text-muted"><%= @animal.localisation %></small></p>
-    </div>
-  </div>
-
-  <div class="card-show">
-    <h5 class="card-show-title"><%= @animal.price_per_day.to_i %> € </h5>
-    <div class='checkin'>
-      <%= simple_form_for(@animal @booking) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :address %>
-        <%= f.input :rating %>
-        <%= f.submit %>
-      <% end %>
-    </div>
-      <div class= "button-show">
-        <a href="#" class="button-animal-show">Reserve</a>
+<div class="container-animals">
+  <h1 class="animal-name"><strong><%= @animal.name %></strong></h1>
+  <div class="container_image_show">
+    <div class="animal_info mb-3">
+      <%=cl_image_tag @animal.photo.key, class:"image_show"%>
+      <div class="card-body">
+        <div class="card-title-localisation">
+          <h5 class="card-title"><strong><%= @animal.owner.email %></strong></h5>
+          <p class="card-text">📍<%= @animal.localisation %></p>
+        </div>
+        <p class="card-text"><%= @animal.summary %></p>
+          <div class="capacity">
+            <% if @animal.can_fly %>
+            <%= image_tag("can_fly_2.png") %>
+            <% end %>
+            <% if @animal.can_walk %>
+            <%= image_tag("can_walk_2.png") %>
+            <% end %>
+            <% if @animal.can_swim %>
+            <%= image_tag("can_swim_2.png") %>
+            <% end %>
+          </div>
       </div>
-  </div>
+    </div>
 
+    <div class="card-show">
+      <h5 class="card-show-title"><strong>$ <%= @animal.price_per_day.to_i %></strong><em> per day</em></h5>
+      <div class='checkin'>
+        <%= simple_form_for [@animal, @booking] do |f| %>
+          <%= f.input :start_date, as: :date, html5: true, label: 'Booking start' %>
+          <%= f.input :end_date, as: :date, html5: true, label: 'Booking end' %>
+          <%= f.submit 'Booking now !', class:'button-animal-show'%>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
 </div>
