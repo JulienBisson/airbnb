@@ -1,7 +1,20 @@
 // ----------TITRE : RENTAL REQUESTS----------
-.container {
-  height: 50vh;
-  width: 100%;
+#bookings-main-title {
+  background-color: lightsteelblue;
+  border-radius: 15%;
+  padding: 15px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.bookings-global-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  min-height: 100vh;
+  padding: 5%;
 }
 
 body {
@@ -23,6 +36,7 @@ body {
   background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
   border-radius: 10%;
 }
+
 .booking-profile-photo {
   width: 75px;
   height: 75px;
@@ -34,12 +48,6 @@ body {
 .booking-profile-name
 .booking-profile-age
 .booking-profile-job
-
-.reservation-container {
-  background-color: red;
-  padding: 15px;
-
-}
 
 .renter-profile {
   background-color: lightsteelblue;
@@ -77,4 +85,48 @@ body {
   border-radius: 50%;
   // overflow: hidden;
   // object-fit: cover;
+}
+
+// ----------COLONNE SENT----------
+.booking-sent-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+  // background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+  background-color: lightcoral;
+  border-radius: 10%;
+}
+
+.animal-profile {
+  background-color: pink;
+  border-radius: 15%;
+  padding: 15px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.owner-informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15%;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: pink;
+}
+
+.booking-status {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  border-radius: 15%;
+  padding: 15px;
 }
