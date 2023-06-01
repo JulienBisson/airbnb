@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
+
   .animal_info {
     flex: 2;
     margin: 5%;
@@ -20,6 +21,26 @@
     flex: 1;
     margin: 5%;
     border-radius: 10px;
+
+
+    .button-show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .button-animal-show {
+        border: 1px  solid black;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        padding: 10px 24px;
+        width: 150px;
+        background-color: rgba(69,103,131,0.5);
+        color: black;
+        font-family: 'Roboto Flex', sans-serif;
+      }
+    }
 
     p {
       padding-top: 45px;
