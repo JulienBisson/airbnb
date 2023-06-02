@@ -21,19 +21,19 @@
  <div class="card-product-infos">
  <div class='product-name-localisation'>
  <%= animal.name %>
- <p>📍<%= animal.localisation %></p>
+ <p><%= animal.localisation %></p>
  </div>
  <div class='card-price-capacity'>
  <h6 class="price">💰<%= animal.price_per_day.to_i %>$/day</h6>
  <div class='beast-capacity'>
  <% if animal.can_fly %>
- <span class='beast-capacity-icon'>🪽</span>
+ <%= image_tag('can_fly_2.png') %>
  <% end %>
  <% if animal.can_walk %>
- <span class='beast-capacity-icon'>🐾</span>
+ <%= image_tag('can_walk_2.png') %>
  <% end %>
  <% if animal.can_swim %>
- <span class='beast-capacity-icon'>🌊</span>
+ <%= image_tag('can_swim_2.png') %>
  <% end %>
 
  </div>
