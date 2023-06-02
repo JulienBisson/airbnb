@@ -2,9 +2,9 @@
   <div class="container-fluid">
     <div class='beats-logo-title'>
       <a class="navbar-brand" href="/">
-        <img src="https://cdn.pixabay.com/photo/2016/04/01/11/29/avatar-1300370_1280.png" alt="logo" class='rounded-circle'>
+        <%= image_tag 'Rent a beast_logo.png', class: 'rounded-circle'%>
       </a>
-      <h5>Discovery Fantastics Beats</h5>
+      <h5>Fantastics Beats</h5>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@
             <a class="nav-link" href="/owner/animals/new/">Add a beast</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/bookings">Bookings</a>
+            <a class="nav-link" href="/bookings">Dashboard</a>
           </li>
           <% unless user_signed_in? %>
           <li class="nav-item">
