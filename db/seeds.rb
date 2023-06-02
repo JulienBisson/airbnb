@@ -17,8 +17,8 @@ sasha = User.create!(username: "Sasha", age: 30, job: "taxidermist", email: "sas
 
 puts "Creating animals..."
 
-buckbeak = Animal.create!(
-  name: 'Buckbeak',
+acromantula = Animal.create!(
+  name: 'Acromantula',
   price_per_day: 600,
   localisation: 'Hogwarts',
   can_fly: true,
@@ -28,27 +28,27 @@ buckbeak = Animal.create!(
   owner: harry
 )
 
-  file = File.open(Rails.root.join("db/images/13_BUCKBEAK_HOGWARTS.jpg"))
-  buckbeak.photo.attach(io: file, filename: "buckbeak.jpg", content_type: "image/jpeg")
-  buckbeak.save!
+  file = File.open(Rails.root.join("db/images/1_ACROMANTULA.jpg"))
+  acromantula.photo.attach(io: file, filename: "acromantula.jpg", content_type: "image/jpeg")
+  acromantula.save!
 
-ikran = Animal.create!(
-  name: 'Ikran',
+gorillax = Animal.create!(
+  name: 'Gorillax',
   price_per_day: 1000,
-  localisation: 'Pandora',
-  can_fly: true,
+  localisation: 'Amazon Jungle',
+  can_fly: false,
   can_swim: false,
-  can_walk: false,
-  summary: "Fly away with this superb ikran to a new horizon. Don't be put off by its growling, it doesn't eat its owner",
+  can_walk: true,
+  summary: "Gorillax is the king of the jungle, a massive gorilla that stands over 20 feet tall and weighs more than 10 tons.",
   owner: tom
 )
 
-  file = File.open(Rails.root.join("db/images/10_IKRAN_AVATAR.jpeg"))
-  ikran.photo.attach(io: file, filename: "ikran.jpg", content_type: "image/jpeg")
-  ikran.save!
+  file = File.open(Rails.root.join("db/images/2_GORILLAX.jpg"))
+  gorillax.photo.attach(io: file, filename: "gorillax.jpg", content_type: "image/jpeg")
+  gorillax.save!
 
-dragon_and_donkey = Animal.create!(
-  name: 'Dragon and Donkey',
+griffon = Animal.create!(
+  name: 'Griffon',
   price_per_day: 1600,
   localisation: 'Far far away',
   can_fly: true,
@@ -57,27 +57,27 @@ dragon_and_donkey = Animal.create!(
   summary: "this cute little couple will be able to welcome you at home if you wish to make a delicious meal with you",
   owner: flora)
 
-  file = File.open(Rails.root.join("db/images/8_DRAGON_DONKEY_SHREK.jpeg"))
-  dragon_and_donkey.photo.attach(io: file, filename: "dragon_and_donkey.jpg", content_type: "image/jpeg")
-  dragon_and_donkey.save!
+  file = File.open(Rails.root.join("db/images/3_GRIFFON.jpg"))
+  griffon.photo.attach(io: file, filename: "griffon.jpg", content_type: "image/jpeg")
+  griffon.save!
 
-lokhlass = Animal.create!(
-  name: 'Lokhlass',
+hippogriff = Animal.create!(
+  name: 'Hippogriff',
   price_per_day: 850,
   localisation: 'Aqualand',
-  can_fly: false,
-  can_swim: true,
-  can_walk: false,
+  can_fly: true,
+  can_swim: false,
+  can_walk: true,
   summary: "Lokhlass is the ideal ocean companion for your family outings. He lives in the marvelous Aqualand water park but he can be privatized just for you.. Try the cruise on the back of Lokhlass",
   owner: sasha)
 
-  file = File.open(Rails.root.join("db/images/14_LOKHLASS_POKEMON.jpg"))
-  lokhlass.photo.attach(io: file, filename: "lokhlass.jpg", content_type: "image/jpeg")
-  lokhlass.save!
+  file = File.open(Rails.root.join("db/images/4_HIPPOGRIFF.jpg"))
+  hippogriff.photo.attach(io: file, filename: "hippogriff.jpg", content_type: "image/jpeg")
+  hippogriff.save!
 
 
-falkor = Animal.create!(
-  name: 'Falkor',
+mermaid = Animal.create!(
+  name: 'Mermaid',
   price_per_day: 2000,
   localisation: 'Infinite sky',
   can_fly: true,
@@ -86,15 +86,129 @@ falkor = Animal.create!(
   summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
   owner: tom)
 
-  file = File.open(Rails.root.join("db/images/7_FALKOR_HISTOIRE_SANS_FIN.jpg"))
-  falkor.photo.attach(io: file, filename: "falkor.jpg", content_type: "image/jpeg")
-  falkor.save!
+  file = File.open(Rails.root.join("db/images/5_MERMAID.jpg"))
+  mermaid.photo.attach(io: file, filename: "mermaid.jpg", content_type: "image/jpeg")
+  mermaid.save!
 
+  occamy = Animal.create!(
+    name: 'Occamy',
+    price_per_day: 2000,
+    localisation: 'Infinite sky',
+    can_fly: false,
+    can_swim: true,
+    can_walk: false,
+    summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
+    owner: tom)
+
+    file = File.open(Rails.root.join("db/images/6_OCCAMY.jpg"))
+    occamy.photo.attach(io: file, filename: "occamy.jpg", content_type: "image/jpeg")
+    occamy.save!
+
+  phoenix = Animal.create!(
+    name: 'Phoenix',
+    price_per_day: 2000,
+    localisation: 'Infinite sky',
+    can_fly: false,
+    can_swim: true,
+    can_walk: false,
+    summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
+    owner: tom)
+
+    file = File.open(Rails.root.join("db/images/7_PHOENIX.jpg"))
+    phoenix.photo.attach(io: file, filename: "phoenix.jpg", content_type: "image/jpeg")
+    phoenix.save!
+
+  werewolf = Animal.create!(
+    name: 'Werewolf',
+    price_per_day: 2000,
+    localisation: 'Infinite sky',
+    can_fly: false,
+    can_swim: true,
+    can_walk: false,
+    summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
+    owner: tom)
+
+    file = File.open(Rails.root.join("db/images/8_WEREWOLF.jpg"))
+    werewolf.photo.attach(io: file, filename: "werewolf.jpg", content_type: "image/jpeg")
+    werewolf.save!
+
+  zephir = Animal.create!(
+    name: 'Zephir',
+    price_per_day: 2000,
+    localisation: 'Infinite sky',
+    can_fly: false,
+    can_swim: true,
+    can_walk: false,
+    summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
+    owner: tom)
+
+    file = File.open(Rails.root.join("db/images/9_ZEPHIR.jpg"))
+    zephir.photo.attach(io: file, filename: "zephir.jpg", content_type: "image/jpeg")
+    zephir.save!
+
+
+  duckzilla = Animal.create!(
+    name: 'Duckzilla',
+    price_per_day: 2000,
+    localisation: 'Infinite sky',
+    can_fly: false,
+    can_swim: false,
+    can_walk: true,
+    summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
+    owner: tom)
+
+    file = File.open(Rails.root.join("db/images/10_DUCKZILLA.jpg"))
+    duckzilla.photo.attach(io: file, filename: "duckzilla.jpg", content_type: "image/jpeg")
+    duckzilla.save!
+
+  sandstinger = Animal.create!(
+    name: 'Sandstinger',
+    price_per_day: 2000,
+    localisation: 'Infinite sky',
+    can_fly: false,
+    can_swim: false,
+    can_walk: true,
+    summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
+    owner: tom)
+
+    file = File.open(Rails.root.join("db/images/11_SANDSTINGER.jpg"))
+    sandstinger.photo.attach(io: file, filename: "sandstinger.jpg", content_type: "image/jpeg")
+    sandstinger.save!
+
+
+  karktopus = Animal.create!(
+    name: 'Karktopus',
+    price_per_day: 2000,
+    localisation: 'Infinite sky',
+    can_fly: false,
+    can_swim: true,
+    can_walk: false,
+    summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
+    owner: tom)
+
+    file = File.open(Rails.root.join("db/images/12_KARKTOPUS.jpg"))
+    karktopus.photo.attach(io: file, filename: "karktopus.jpg", content_type: "image/jpeg")
+    karktopus.save!
+
+
+  sharknado = Animal.create!(
+    name: 'Sharknado',
+    price_per_day: 2000,
+    localisation: 'Infinite sky',
+    can_fly: false,
+    can_swim: true,
+    can_walk: false,
+    summary: "this dragon is the friendliest of companions. Despite his size, he will be able to show kindness and gentleness",
+    owner: tom)
+
+    file = File.open(Rails.root.join("db/images/13_SHARKNADO.jpg"))
+    sharknado.photo.attach(io: file, filename: "sharknado.jpg", content_type: "image/jpeg")
+    sharknado.save!
 puts "Creating bookings..."
 
 Booking.create!(
   user: tom, # <= dans le contexte, il s'agit du renter
-  animal: buckbeak, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  animal: acromantula, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 1800,
@@ -103,7 +217,7 @@ Booking.create!(
 
 Booking.create!(
   user: flora, # <= dans le contexte, il s'agit du renter
-  animal: ikran, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  animal: gorillax, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 3000,
@@ -112,7 +226,7 @@ Booking.create!(
 
 Booking.create!(
   user: ben, # <= dans le contexte, il s'agit du renter
-  animal: falkor, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  animal: hippogriff, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 6000,
@@ -121,7 +235,7 @@ Booking.create!(
 
 Booking.create!(
   user: peggy, # <= dans le contexte, il s'agit du renter
-  animal: falkor, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  animal: griffon, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 6000,
@@ -130,7 +244,79 @@ Booking.create!(
 
 Booking.create!(
   user: tom, # <= dans le contexte, il s'agit du renter
-  animal: lokhlass, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  animal: mermaid, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  start_date: Date.parse("16-06-2023"),
+  end_date: Date.parse("18-06-2023"),
+  total_price: 2550,
+  status: "accepted"
+)
+
+Booking.create!(
+  user: tom, # <= dans le contexte, il s'agit du renter
+  animal: occamy, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  start_date: Date.parse("16-06-2023"),
+  end_date: Date.parse("18-06-2023"),
+  total_price: 2550,
+  status: "accepted"
+)
+
+Booking.create!(
+  user: tom, # <= dans le contexte, il s'agit du renter
+  animal: phoenix, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  start_date: Date.parse("16-06-2023"),
+  end_date: Date.parse("18-06-2023"),
+  total_price: 2550,
+  status: "accepted"
+)
+
+Booking.create!(
+  user: tom, # <= dans le contexte, il s'agit du renter
+  animal: werewolf, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  start_date: Date.parse("16-06-2023"),
+  end_date: Date.parse("18-06-2023"),
+  total_price: 2550,
+  status: "accepted"
+)
+
+Booking.create!(
+  user: tom, # <= dans le contexte, il s'agit du renter
+  animal: zephir, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  start_date: Date.parse("16-06-2023"),
+  end_date: Date.parse("18-06-2023"),
+  total_price: 2550,
+  status: "accepted"
+)
+
+Booking.create!(
+  user: tom, # <= dans le contexte, il s'agit du renter
+  animal: duckzilla, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  start_date: Date.parse("16-06-2023"),
+  end_date: Date.parse("18-06-2023"),
+  total_price: 2550,
+  status: "accepted"
+)
+
+Booking.create!(
+  user: tom, # <= dans le contexte, il s'agit du renter
+  animal: sandstinger, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  start_date: Date.parse("16-06-2023"),
+  end_date: Date.parse("18-06-2023"),
+  total_price: 2550,
+  status: "accepted"
+)
+
+Booking.create!(
+  user: tom, # <= dans le contexte, il s'agit du renter
+  animal: karktopus, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
+  start_date: Date.parse("16-06-2023"),
+  end_date: Date.parse("18-06-2023"),
+  total_price: 2550,
+  status: "accepted"
+)
+
+Booking.create!(
+  user: tom, # <= dans le contexte, il s'agit du renter
+  animal: sharknado, # <= dans le contexte, il s'agit de l'animal que le renter veut louer
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
