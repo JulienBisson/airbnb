@@ -1,0 +1,50 @@
+
+.container-create-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: #2F2F2F;
+  color: #F4F4F4;
+
+  .title-create {
+    margin-top: 70px;
+    margin-bottom: 20px;
+  }
+  .form-create{
+    // border: 1px solid black;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+
+
+    .button-create-animal {
+      border-radius: 5px;
+      border: 1px solid #F4F4F4;
+      text-decoration: none;
+      padding: 10px 24px;
+      background-color: #2F2F2F;
+      color: #F4F4F4;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 20px;
+
+      &:hover{
+        box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+        border: 0px solid #F4F4F4;
+      }
+    }
+  }
+}
+
+.form-control {
+  background-color: #2F2F2F;
+  border: 1px solid #F4F4F4;
+
+  input[type="checkbox"] {
+    background-color: #2F2F2F;
+  }
+}
