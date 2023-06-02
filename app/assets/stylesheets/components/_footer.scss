@@ -2,35 +2,31 @@
     Auther: Abdelrhman Said
 */
 .beats-footer {
-  background: #F4F4F4;
+  background-color: #2F2F2F;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+  box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+
 }
 .beats-footer-links {
   display: flex;
   align-items: center;
 }
 .beats-footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: #F4F4F4;
   text-decoration: none;
   font-size: 16px;
   padding: 0px 10px;
 }
 .beats-footer-links a:hover {
-  opacity: 1;
   transform: scale(1.1);
-}
-.beats-footer .fa-heart {
-  color: #D23333;
 }
 
 .beats-footer-copyright {
-  color: lightslategrey
+  color: #F4F4F4
 }
 
 
