@@ -1,0 +1,11 @@
+<h1><strong>Add a beasts</strong></h1>
+<%= simple_form_for [@owner_animal, @animal] do |f| %>
+  <%= f.input :name, label: "Name of your beast" %>
+  <%= f.input :price_per_day, label: "Price per day ?" %>
+  <%= f.input :localisation, label: 'Where find it ?' %>
+  <%= f.input :can_swim, label: 'Did it swim ?' %>
+  <%= f.input :can_walk, label: 'Did it walk ?' %>
+  <%= f.input :can_fly, label: 'Did it fly ?' %>
+  <%= f.input :summary, label: 'A short description :' %>
+  <%= f.submit "Submit your beast", class: "btn btn-primary" %>
+<% end %>

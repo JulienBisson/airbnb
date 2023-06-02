@@ -8,12 +8,12 @@ User.destroy_all
 
 puts 'Creating user...'
 
-tom = User.create!(username: "Tom", age: 28, job: "architect", email: "tom@mail.com", password: "secret")
-flora = User.create!(username: "Flora", age: 25, job: "beekeeper", email: "flora@mail.com", password: "secret")
-ben = User.create!(username: "Ben", age: 32, job: "mason", email: "ben@mail.com", password: "secret")
-peggy = User.create!(username: "Peggy", age: 35, job: "florist", email: "peggy@mail.com", password: "secret")
-harry = User.create!(username: "Harry", age: 26, job: "developer", email: "harry@mail.com", password: "secret")
-sasha = User.create!(username: "Sasha", age: 30, job: "data-analyst", email: "sasha@mail.com", password: "secret")
+tom = User.create!(username: "Tom", age: 28, job: "painting", email: "tom@mail.com", password: "secret")
+flora = User.create!(username: "Flora", age: 25, job: "motorcycle", email: "flora@mail.com", password: "secret")
+ben = User.create!(username: "Ben", age: 32, job: "drum kit", email: "ben@mail.com", password: "secret")
+peggy = User.create!(username: "Peggy", age: 35, job: "yoga", email: "peggy@mail.com", password: "secret")
+harry = User.create!(username: "Harry", age: 26, job: "photography", email: "harry@mail.com", password: "secret")
+sasha = User.create!(username: "Sasha", age: 30, job: "taxidermist", email: "sasha@mail.com", password: "secret")
 
 puts "Creating animals..."
 
