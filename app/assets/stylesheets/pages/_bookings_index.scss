@@ -1,6 +1,6 @@
 .bookings-global-container {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 2%;
+  margin-bottom: 5%;
   min-height: 100vh;
   padding: 5%;
 }
@@ -13,19 +13,55 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5px;
+  margin-bottom: 2%;
 }
 
-// ----------COLONNE RECEIVED----------
-
-.booking-received-card {
-  display: flex;
+.booking-card {
   align-items: center;
-  border: 1px solid rgb(235,235,235);
   background-color: #f4f4f4;
-  margin-bottom: 25px;
-  padding: 15px 15px;
   border-radius: 10px;
+  border: 1px solid rgb(235,235,235);
+  display: flex;
+  margin-bottom: 25px;
+  padding-bottom: 2vh;
+  padding-left: 4vh;
+  padding-right: 2vh;
+  padding-top: 2vh;
+  height: 17rem;
+}
+
+.booking-card-box-one {
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  height: 15rem;
+}
+
+.booking-card-box-two {
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.booking-card-box-three {
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
 }
 
 .booking-profile-photo {
@@ -36,45 +72,19 @@
   object-fit: cover;
 }
 
-.booking-profile-name {
+#booking-profile-age {
+  // background-color: chartreuse;
+}
+
+#booking-profile-job {
+  // background-color: indianred;
+}
+
+#booking-profile-name {
   text-align: center;
   font-weight: bold;
   font-size: larger;
-
-
-}
-.booking-profile-age
-.booking-profile-job
-
-.renter-profile {
-  background-color: lightsteelblue;
-  border-radius: 15%;
-  padding: 15px;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.reservation-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  border-radius: 10px;
-
-}
-.reservation-acceptance {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  padding: 15px;
-  border-radius: 10px;
+  // background-color: aqua;
 }
 
 .booking-icon {
@@ -84,53 +94,6 @@
   margin-right: 10px;
   // overflow: hidden;
   // object-fit: cover;
-}
-
-// ----------COLONNE SENT----------
-.booking-sent-card {
-  display: flex;
-  margin-bottom: 25px;
-  padding: 15px 15px;
-  border: 1px solid rgb(235,235,235);
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  .row {
-    justify-content: space-between;
-    align-items: center;
-
-  }
-}
-
-.animal-profile {
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.owner-informations {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-
-.booking-status {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .btn-booking {
@@ -148,8 +111,4 @@
   height: 50px;
   width: 50px;
   border-radius: 50px;
-}
-
-.receive col-md-6 {
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
 }

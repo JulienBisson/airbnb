@@ -4,23 +4,23 @@
     <h1 class="text-center">Received</h1>
     <p class="text-center">These people want to book one of your animals! Answer them:</p>
     <% @owner_bookings.each do |booking| %> <!-- ITERATION CARD AUTOMATIQUE-->
-      <div class="booking-received-card"> <!-- BOOKING RECEIVED CARD -->
+      <div class="booking-card"> <!-- BOOKING RECEIVED CARD -->
         <div class="row"> <!-- card row-->
-          <div class="renter-profile col-md-4"> <!-- renter profile -->
+          <div class="booking-card-box-one col-md-4"> <!-- renter profile -->
             <img src="" alt="renter profile photo" class="booking-profile-photo">
-            <p class="booking-profile-name"><%= booking.user.username %> is your renter</p>
-            <p class="booking-profile-age"><%= booking.user.age %> y/o</p>
-            <p class="booking-profile-job">Passionate about <%= booking.user.job %></p>
+            <p id="booking-profile-name"><%= booking.user.username %> is your renter</p>
+            <p id="booking-profile-age"><%= booking.user.age %> y/o</p>
+            <p id="booking-profile-job">Passionate about <%= booking.user.job %></p>
           </div> <!-- fin renter profile -->
           <div class="reservation-container col-md-8">
-            <div class="reservation-details">
+            <div class="booking-card-box-two">
               <p><%= current_user.username %> wants to rent <%= booking.animal.name %> <img src="" alt="photo animal loué" class="booking-profile-photo"></p>
                 <div class="booking-date-request">
                   <p> <img src="https://cdn-icons-png.flaticon.com/512/123/123392.png?w=1380&t=st=1685540969~exp=1685541569~hmac=2941c188814385158d9c3ad1b8fd230d8e9ac38e604193cf245f9d4eb6bf669a" alt="icone calendar" class="booking-icon"></p>
                   <p>From <%= booking.start_date %> to <%= booking.end_date %></p>
                 </div>
             </div> <!-- fin réservation détails -->
-            <div class="reservation-acceptance">
+            <div class="booking-card-box-two">
             <% if booking.status.nil? %>
               <p>Booking pending </p>
                 <div class="btn-booking">
@@ -43,11 +43,11 @@
     <h1 class="text-center">Sent</h1>
     <p class="text-center">The animals you want to book :</p>
     <% @user_bookings.each do |booking| %> <!-- ITERATION CARD AUTOMATIQUE-->
-      <div class="booking-sent-card"> <!-- BOOKING SENT CARD -->
+      <div class="booking-card"> <!-- BOOKING SENT CARD -->
 
-        <div class="row"> <!-- card row-->
+        <div class="row w-100"> <!-- card row-->
 
-          <div class="animal-profile col-md-4"> <!-- animal profile -->
+          <div class="booking-card-box-one col-md-4"> <!-- animal profile -->
             <img src="" alt="" class="booking-profile-photo">
             <p class="booking-animal-name"><%= booking.animal.name %></p>
             <p class="booking-profile-price-per-day"><%= booking.animal.price_per_day %></p>
@@ -68,7 +68,7 @@
 
           <div class="booking-details-container col-md-8">
 
-            <div class="owner-informations">
+            <div class="booking-card-box-two">
 
               <div class="booking-date-info">
                 <p><%=current_user.username%> wants to rent <%= booking.animal.name %></p>
@@ -82,7 +82,7 @@
 
             </div> <!-- fin owner-informations -->
 
-            <div class="booking-status">
+            <div class="booking-card-box-two">
               <p>Booking is pending</p>
             </div> <!-- fin booking status -->
 
