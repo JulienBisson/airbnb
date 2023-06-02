@@ -1,6 +1,10 @@
+body {
+  color: #f4f4f4;
+}
+
 .container-animals {
   margin-top: 70px;
-  background-color: #f4f4f4;
+  background-color: #2F2F2F;
   height: 100vh;
 }
 
@@ -21,6 +25,7 @@
     width: 100%;
     border-radius: 10px;
     background-size: cover;
+    box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
   }
 
   .card-show-title {
@@ -34,7 +39,9 @@
     margin: 2% 5%;
     margin-bottom: 7%;
     border-radius: 10px;
-    background-color: lightgrey;
+    background-color: #2F2F2F;
+    box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+    color: #f4f4f4;
 
     .checkin {
       padding-top: 15px;
@@ -43,19 +50,33 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      input {
+        background-color: #2F2F2F;
+        color: #f4f4f4
+      }
+      input[type="date"] {
+        background-color: #2F2F2F;
+        color: #f4f4f4
+      }
 
       .button-animal-show {
-        border: 1px  solid black;
+        border: 1px  solid #f4f4f4;
         border-radius: 5px;
         text-decoration: none;
         padding: 10px 24px;
-        background-color: rgba(69,103,131,0.5);
-        color: black;
+        background-color: #2F2F2F;
+        color: #f4f4f4;
         font-family: 'Roboto Flex', sans-serif;
         display: flex;
         justify-content: center;
         margin: 0 auto;
         margin-top: 40px;
+
+        &:hover {
+          box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
+          border: 0px  solid #f4f4f4;
+
+        }
 
       }
     }
@@ -83,7 +104,8 @@
   margin-bottom: 10px;
 
   .card-text {
-    color:  black;
+
+    color:  #f4f4f4;
   }
 }
 
@@ -93,12 +115,13 @@
   img {
     height: 100px;
     width: 100schepx;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid #f4f4f4;
     border-radius: 50%;
     margin-top: 10px;
     margin-right: 15px;
+    color: #f4f4f4;
     &:hover {
-      box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.176);
+      box-shadow: #B75A13 0px 2px 4px 0px, #B75A13 0px 2px 16px 0px;
       border: 0px solid rgba(0,0,0,0.2);
 
     }
@@ -106,7 +129,7 @@
 }
 
 #total-price-js {
-  color: $primary;
+  color: #B75A13;
   font-weight: bold;
   font-size: 24px;
   margin-top: 13px;

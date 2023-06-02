@@ -5,19 +5,19 @@
       <%=cl_image_tag @animal.photo.key, class:"image_show"%>
       <div class="card-body">
         <div class="card-title-localisation">
-          <h5 class="card-title"><strong><%= @animal.owner.email %></strong></h5>
+          <h5 class="card-title">Belongs to <strong><%= @animal.owner.username.capitalize %></strong></h5>
           <p class="card-text">📍<%= @animal.localisation %></p>
         </div>
         <p class="card-text"><%= @animal.summary %></p>
           <div class="capacity">
             <% if @animal.can_fly %>
-            <%= image_tag("can_fly_2.png") %>
+            <%= image_tag("can_fly_3.png") %>
             <% end %>
             <% if @animal.can_walk %>
-            <%= image_tag("can_walk_2.png") %>
+            <%= image_tag("can_walk_3.png") %>
             <% end %>
             <% if @animal.can_swim %>
-            <%= image_tag("can_swim_2.png") %>
+            <%= image_tag("can_swim_3.png") %>
             <% end %>
           </div>
       </div>
