@@ -1,7 +1,7 @@
 <div class="bookings-global-container row">
-  <h1 id="bookings-main-title">Bookings</h1>
-  <div class="receive col-md-6"> <!-- 1ERE COLONNE -->
-    <h1 class="text-center">Received</h1>
+  <h1 id="bookings-main-title">My dashboard</h1>
+  <div class="col-received col-md-6"> <!-- 1ERE COLONNE -->
+    <h1 class="text-center">Rental requests received</h1>
     <p class="text-center">These people want to book one of your animals! Answer them:</p>
     <% @owner_bookings.each do |booking| %> <!-- ITERATION CARD AUTOMATIQUE-->
       <div class="booking-card"> <!-- BOOKING RECEIVED CARD -->
@@ -39,8 +39,8 @@
     <% end %> <!-- FIN ITERATION CARD AUTOMATIQUE-->
   </div> <!-- FIN 1ERE COLONNE -->
 
-  <div class="receive col-md-6"> <!-- 2E COLONNE -->
-    <h1 class="text-center">Sent</h1>
+  <div class="col-sent col-md-6"> <!-- 2E COLONNE -->
+    <h1 class="text-center">Bookings demands sent</h1>
     <p class="text-center">The animals you want to book :</p>
     <% @user_bookings.each do |booking| %> <!-- ITERATION CARD AUTOMATIQUE-->
       <div class="booking-card"> <!-- BOOKING SENT CARD -->
