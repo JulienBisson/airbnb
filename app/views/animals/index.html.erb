@@ -1,14 +1,14 @@
 <div class="main-animals-container">
  <div class="row justify-content-center w-100">
- <div class="col-sm-8 my-3">
- <%= form_with url: animals_path, method: :get, class: "d-flex" do %>
- <%= text_field_tag :query,
- params[:query],
- class: "form-control",
- placeholder: "Which animal are you looking for ?"
- %>
- <%= submit_tag "Search", name: "", class: "btn btn-pink" %>
- <% end %>
+  <div class="col-sm-8 my-3">
+  <%= form_with url: animals_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control",
+  placeholder: "Which animal are you looking for ?"
+  %>
+  <%= submit_tag "Search", name: "", class: "btn btn-pink" %>
+  <% end %>
  </div>
  </div>
 
