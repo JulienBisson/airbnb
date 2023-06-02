@@ -9,3 +9,6 @@ application.register("typed-js", TypedJsController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import CalculDateJsController from "./calcul_date_js_controller"
+application.register("calcul-date-js", CalculDateJsController)

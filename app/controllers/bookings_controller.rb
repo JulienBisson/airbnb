@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     # @booking.total_price = (@booking.end_date - @booking.start_date) * @animal.price_per_day
     if @booking.save
-      redirect_to bookings_path
+      redirect_to bookings_path, notice: "Booking save"
     else
       render 'animals/show', status: :unprocessable_entity
     end
