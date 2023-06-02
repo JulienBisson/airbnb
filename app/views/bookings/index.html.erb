@@ -9,7 +9,7 @@
       <div class="booking-card"> <!-- BOOKING RECEIVED CARD -->
         <div class="row"> <!-- card row-->
           <div class="booking-card-box-one col-md-4"> <!-- renter profile -->
-            <p><%= cl_image_tag booking.user.photo.key, class:"booking-profile-photo"%></p>
+            <p><%= cl_image_tag booking.user.avatar.key, class:"booking-profile-photo"%></p>
             <p id="booking-profile-name"><%= booking.user.username %></p>
             <p id="booking-profile-age"><%= booking.user.age %> y/o</p>
             <p id="booking-profile-job">Passionate about <%= booking.user.job %></p>
@@ -26,8 +26,8 @@
             <% if booking.status.nil? %>
               <p>Booking pending </p>
                 <div class="btn-booking">
-                  <button class="btn btn-success"><%= link_to 'Accept', accept_owner_booking_path(booking), data: {turbo_method: :patch} %></button>
-                  <button class="btn btn-danger"><%= link_to 'Decline', decline_owner_booking_path(booking), data: {turbo_method: :patch} %></button>
+                  <%= link_to 'Accept', accept_owner_booking_path(booking), data: {turbo_method: :patch} %>
+                  <%= link_to 'Decline', decline_owner_booking_path(booking), data: {turbo_method: :patch} %>
                 </div>
                 <% elsif booking.status == "accepted" %>
                   <p>Booking accepted </p>
@@ -55,7 +55,7 @@
             <%# <img src="" alt="" class="booking-profile-photo"> %>
             <p><%= cl_image_tag booking.animal.photo.key, class:"booking-animal-photo"%></p>
             <p class="booking-animal-name"><%= booking.animal.name %></p>
-            <p class="booking-profile-price-per-day"><%= booking.animal.price_per_day %></p>
+            <p class="booking-profile-price-per-day">$ <%= booking.animal.price_per_day.to_i %></p>
 
             <div class="icon-capacity-beast">
               <% if @animal.can_fly %>
@@ -87,7 +87,7 @@
             </div> <!-- fin owner-informations -->
 
             <div class="booking-card-box-two">
-              <p>Booking is pending</p>
+              <p>Booking is pending ⏰</p>
             </div> <!-- fin booking status -->
 
           </div> <!-- fin booking details container -->

@@ -241,7 +241,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 1800,
-  status: "in progress..."
+  status: nil
 )
 
 Booking.create!(
