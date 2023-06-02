@@ -1,16 +1,13 @@
 module Owner
   class AnimalsController < ApplicationController
-    skip_before_action :authenticate_user!
+    # skip_before_action :authenticate_user!
 
     def index
-      @owner_animals = Animal.all
+      @animals = Animal.all
     end
 
-
-    private
-
-    def restaurant_params
-      params.require(:restaurant).permit(:name, :address, :category)
+    def new
+      @animal = Animal.new
     end
-
-    end
+  end
+end

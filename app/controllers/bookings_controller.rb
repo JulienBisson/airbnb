@@ -7,6 +7,7 @@ class BookingsController < ApplicationController
     @all_bookings = Booking.all
     @user_bookings = Booking.where(user_id: current_user.id)
     @owner_bookings = Booking.includes(:animal).where(animal: { owner_id: current_user.id })
+    @animal = Animal.new
   end
 
   def create
@@ -14,6 +15,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.animal = @animal
     @booking.user = current_user
+    # @booking.total_price = (@booking.end_date - @booking.start_date) * @animal.price_per_day
     if @booking.save
       redirect_to bookings_path
     else
