@@ -5,35 +5,36 @@
       <%=cl_image_tag @animal.photo.key, class:"image_show"%>
       <div class="card-body">
         <div class="card-title-localisation">
-          <h5 class="card-title"><strong><%= @animal.owner.email %></strong></h5>
+          <h5 class="card-title">Belongs to <strong><%= @animal.owner.username.capitalize %></strong></h5>
           <p class="card-text">📍<%= @animal.localisation %></p>
         </div>
         <p class="card-text"><%= @animal.summary %></p>
           <div class="capacity">
             <% if @animal.can_fly %>
-            <%= image_tag("can_fly_2.png") %>
+            <%= image_tag("can_fly_3.png") %>
             <% end %>
             <% if @animal.can_walk %>
-            <%= image_tag("can_walk_2.png") %>
+            <%= image_tag("can_walk_3.png") %>
             <% end %>
             <% if @animal.can_swim %>
-            <%= image_tag("can_swim_2.png") %>
+            <%= image_tag("can_swim_3.png") %>
             <% end %>
           </div>
       </div>
     </div>
 
     <div class="card-show" data-controller="calcul-date-js">
-      <h5 class="card-show-title" data-calcul-date-js-target="price"><strong>$ <%= @animal.price_per_day.to_i %></strong><em> per day</em></h5>
+      <div class="card-show-price">
+        <h5 class="card-show-title" data-calcul-date-js-target="price" data-price="<%= @animal.price_per_day.to_i %>"><strong>$ <%= @animal.price_per_day.to_i %></strong><em> per day</em></h5>
+        <p data-calcul-date-js-target="result" id="total-price-js"></p>
+      </div>
       <div class='checkin'>
         <%= simple_form_for [@animal, @booking] do |f| %>
           <%= f.input :start_date, as: :date, html5: true, label: 'Booking start', input_html:{ data: {"calcul-date-js-target": "start", action: "change->calcul-date-js#compute"}} %>
           <%= f.input :end_date, as: :date, html5: true, label: 'Booking end', input_html:{ data: {"calcul-date-js-target": "end", action: "change->calcul-date-js#compute"}} %>
           <%= f.submit 'Booking now !', class:'button-animal-show'%>
-          <p data-calcul-date-js-target="result" id="total-price-js"></p>
         <% end %>
       </div>
-
     </div>
 
   </div>
