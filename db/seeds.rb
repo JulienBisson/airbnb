@@ -250,7 +250,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 3000,
-  status: "delined"
+  status: nil
 )
 
 Booking.create!(
@@ -259,7 +259,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 6000,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -268,7 +268,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 6000,
-  status: "declined"
+  status: nil
 )
 
 Booking.create!(
@@ -277,7 +277,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -286,7 +286,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -295,7 +295,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -304,7 +304,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -313,7 +313,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -322,7 +322,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -331,7 +331,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -340,7 +340,7 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
 
 Booking.create!(
@@ -349,5 +349,5 @@ Booking.create!(
   start_date: Date.parse("16-06-2023"),
   end_date: Date.parse("18-06-2023"),
   total_price: 2550,
-  status: "accepted"
+  status: nil
 )
